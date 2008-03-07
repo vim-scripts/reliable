@@ -1,15 +1,16 @@
 " Colorscheme created with ColorSchemeEditor v1.0 beta
 "Name: reliable
 "Maintainer: Erik Falor <ewfalor@gmail.com>
-"Version: v1.0.1
-"Last Change: 2008 Mar 05
+"Version: v1.0.2
+"Last Change: 2008 Mar 07
 "License: Vim License
 
 "Notes: A futuristic colorscheme with a bright, clean look.
 "
 "    This is a helpful mapping while developing colorschemes:
-"    <F1>          :echo synIDattr(synIDtrans(synID(line(.), col(.), 1)), name)<CR>
+"    <F1>          :echo synIDattr(synIDtrans(synID(line('.'), col('.'), 1)), 'name')<CR>
 "
+"Version 1.0.2 - changed Type highlight group to display bold
 
 set background=light
 if version > 580
@@ -96,7 +97,7 @@ highlight link String Constant
 highlight link Structure Type
 highlight link Tag Special
 highlight Todo guifg=#FCB52D guibg=Yellow gui=bold,underline
-highlight Type guifg=#002A5C gui=NONE
+highlight Type guifg=#002A5C gui=bold
 highlight link Typedef Type
 highlight Underlined guifg=#7493BE gui=underline
 
@@ -112,12 +113,13 @@ if v:version >= 700
 				\"Notes" : ["A futuristic colorscheme with a bright, clean look.",
 				\"",
 				\"    This is a helpful mapping while developing colorschemes:",
-				\"    <F1>          :echo synIDattr(synIDtrans(synID(line(.), col(.), 1)), name)<CR>",
+				\"    <F1>          :echo synIDattr(synIDtrans(synID(line('.'), col('.'), 1)), 'name')<CR>",
 				\"",
+				\"Version 1.0.2 - changed Type highlight group to display bold",
 				\],
-				\"Version" : "v1.0.1",
+				\"Version" : "v1.0.2",
 				\"Email" : "ewfalor@gmail.com",
-				\"Last Change" : "2008 Mar 05",
+				\"Last Change" : "2008 Mar 07",
 				\}
 endif
 "}}}
